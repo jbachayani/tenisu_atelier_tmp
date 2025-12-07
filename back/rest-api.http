@@ -1,0 +1,24 @@
+POST http://localhost:3000/api/players
+Content-Type: application/json
+
+{
+  "firstname": "Jean-Baptiste",
+  "lastname": "Chauvin",
+  "shortname": "J.CHA",
+  "sex": "M",
+  "country": {
+    "picture": "https://tenisu.latelier.co/resources/France.png",
+    "code": "FRA"
+  },
+  "picture": "https://tenisu.latelier.co/resources/Default.png",
+  "data": {
+    "rank": 99,
+    "points": 1500,
+    "weight": 75000,
+    "height": 180,
+    "age": 28,
+    "last": [1, 1, 0, 0, 1]
+  }
+}
+
+<> 2025-12-07T142819.200.json
