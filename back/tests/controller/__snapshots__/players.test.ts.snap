@@ -1,0 +1,136 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`getPlayers > should return all players sorted 1`] = `
+[
+  {
+    "country": {
+      "code": "ESP",
+      "picture": "https://tenisu.latelier.co/resources/Espagne.png",
+    },
+    "data": {
+      "age": 33,
+      "height": 185,
+      "last": [
+        1,
+        0,
+        0,
+        0,
+        1,
+      ],
+      "points": 1982,
+      "rank": 1,
+      "weight": 85000,
+    },
+    "firstname": "Rafael",
+    "id": 17,
+    "lastname": "Nadal",
+    "picture": "https://tenisu.latelier.co/resources/Nadal.png",
+    "sex": "M",
+    "shortname": "R.NAD",
+  },
+  {
+    "country": {
+      "code": "SRB",
+      "picture": "https://tenisu.latelier.co/resources/Serbie.png",
+    },
+    "data": {
+      "age": 31,
+      "height": 188,
+      "last": [
+        1,
+        1,
+        1,
+        1,
+        1,
+      ],
+      "points": 2542,
+      "rank": 2,
+      "weight": 80000,
+    },
+    "firstname": "Novak",
+    "id": 52,
+    "lastname": "Djokovic",
+    "picture": "https://tenisu.latelier.co/resources/Djokovic.png",
+    "sex": "M",
+    "shortname": "N.DJO",
+  },
+  {
+    "country": {
+      "code": "USA",
+      "picture": "https://tenisu.latelier.co/resources/USA.png",
+    },
+    "data": {
+      "age": 37,
+      "height": 175,
+      "last": [
+        0,
+        1,
+        1,
+        1,
+        0,
+      ],
+      "points": 3521,
+      "rank": 10,
+      "weight": 72000,
+    },
+    "firstname": "Serena",
+    "id": 102,
+    "lastname": "Williams",
+    "picture": "https://tenisu.latelier.co/resources/Serena.png",
+    "sex": "F",
+    "shortname": "S.WIL",
+  },
+  {
+    "country": {
+      "code": "SUI",
+      "picture": "https://tenisu.latelier.co/resources/Suisse.png",
+    },
+    "data": {
+      "age": 33,
+      "height": 183,
+      "last": [
+        1,
+        1,
+        1,
+        0,
+        1,
+      ],
+      "points": 1784,
+      "rank": 21,
+      "weight": 81000,
+    },
+    "firstname": "Stan",
+    "id": 65,
+    "lastname": "Wawrinka",
+    "picture": "https://tenisu.latelier.co/resources/Wawrinka.png",
+    "sex": "M",
+    "shortname": "S.WAW",
+  },
+  {
+    "country": {
+      "code": "USA",
+      "picture": "https://tenisu.latelier.co/resources/USA.png",
+    },
+    "data": {
+      "age": 38,
+      "height": 185,
+      "last": [
+        0,
+        1,
+        0,
+        0,
+        1,
+      ],
+      "points": 1105,
+      "rank": 52,
+      "weight": 74000,
+    },
+    "firstname": "Venus",
+    "id": 95,
+    "lastname": "Williams",
+    "picture": "https://tenisu.latelier.co/resources/Venus.webp",
+    "sex": "F",
+    "shortname": "V.WIL",
+  },
+]
+`;

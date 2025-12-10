@@ -14,9 +14,9 @@ export async function getPlayer(c: Context) {
     return c.json(players.filter((player) => player.id === id))
   } catch (error) {
     if (error instanceof ZodError) {
-      return c.json({ error: JSON.parse(error.message) })
+      return c.json({ error: JSON.parse(error.message) }, 400)
     }
-    return c.json({ error: 'Unknown error' })
+    return c.json({ error: 'Unknown error' }, 500)
   }
 }
 

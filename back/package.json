@@ -4,16 +4,18 @@
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "test": "vitest --run"
   },
   "dependencies": {
-    "@hono/node-server": "^1.19.6",
-    "hono": "^4.10.7",
+    "@hono/node-server": "^1.19.7",
+    "hono": "^4.10.8",
     "zod": "^4.1.13"
   },
   "devDependencies": {
-    "@types/node": "^20.11.17",
-    "tsx": "^4.7.1",
-    "typescript": "^5.8.3"
+    "@types/node": "^24.10.3",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.15"
   }
 }
