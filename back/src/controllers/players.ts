@@ -4,8 +4,13 @@ import { playerSchema } from '../schema.js'
 import type { Player } from '../types.js'
 
 export async function getPlayers(c: Context) {
-  const players: Player[] = JSON.parse(await c.env.TENISU_DB.get('players'))
-  return c.json(players.toSorted((a, b) => a.data.rank - b.data.rank))
+  try {
+    const players: Player[] = JSON.parse(await c.env.TENISU_DB.get('players'))
+    return c.json(players.toSorted((a, b) => a.data.rank - b.data.rank))
+  } catch (error) {
+    console.error(error)
+    return c.json({ error: 'Unknown error' }, 500)
+  }
 }
 
 export async function getPlayer(c: Context) {
