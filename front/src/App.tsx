@@ -21,6 +21,11 @@ export default function App() {
     loadPlayers()
   }, [])
 
+  const filteredPlayers = players.filter((p) => {
+    const fullName = `${p.firstname} ${p.lastname}`.toLowerCase()
+    return fullName.includes(search.toLowerCase())
+  })
+
   return (
     <div className="min-h-screen p-6 md:p-12 relative overflow-x-hidden font-sans">
       <div className="relative z-10 w-full max-w-2xl mx-auto lg:mx-0 lg:ml-20">
@@ -61,7 +66,7 @@ export default function App() {
               </p>
             </div>
           ) : (
-            players.map((player) => (
+            filteredPlayers.map((player) => (
               <PlayerCard
                 key={player.id}
                 player={player}
@@ -70,7 +75,7 @@ export default function App() {
             ))
           )}
 
-          {!loading && players.length === 0 && (
+          {!loading && filteredPlayers.length === 0 && (
             <div className="text-white text-center font-bold mt-10 text-xl font-heading">
               Aucun joueur trouvé
             </div>
