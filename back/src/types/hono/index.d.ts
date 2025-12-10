@@ -4,6 +4,7 @@ declare module 'hono' {
   interface Env {
     Bindings: {
       TENISU_DB: KVNamespace
+      FRONT_URL: string
     }
   }
 }

@@ -9,5 +9,8 @@
       "id": "f9afa486f8c14de89afe0d5d24e2b760",
       "remote": true
     }
-  ]
+  ],
+  "vars": {
+    "FRONT_URL": "https://tenisu-front.pages.dev"
+  }
 }
