@@ -1,3 +1,4 @@
 import { App } from './app.js'
 
-void new App().run()
+const app = App.createApp()
+export default app
