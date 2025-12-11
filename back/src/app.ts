@@ -6,7 +6,7 @@ import { cors } from 'hono/cors'
 export class App {
   static createApp() {
     const app = new Hono().basePath('/api')
-    app.use('/api/*', (c: Context, next) => {
+    app.use('*', (c: Context, next) => {
       return cors({
         origin: c.env.FRONT_URL,
         allowMethods: ['GET', 'POST'],
