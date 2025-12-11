@@ -14,7 +14,7 @@ export class App {
 
     app.onError((error, c) => {
       console.error('HONO ERROR', error)
-      return c.text('Something went wrong')
+      return c.text('valeur :' + c.var.FRONT_URL)
     })
 
     return app
