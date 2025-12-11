@@ -2,6 +2,8 @@
 
 Tenisu est une application de gestion et d'analyse de joueurs de tennis. Le projet est structuré en monorepo contenant une API REST et une interface utilisateur.
 
+**URL Publique :** [https://tenisu-front.pages.dev/)
+
 ## 📂 Structure du Projet
 
 - **back/** : API REST construite avec [Hono](https://hono.dev/), TypeScript et Zod. Utilise un fichier JSON comme base de données persistante.
@@ -56,7 +58,7 @@ L'application s'ouvrira généralement sur `http://localhost:5173` (vérifiez la
 ## 💻 Technologies
 
 * **Langage** : TypeScript
-* **Backend** : Node.js, Hono, Zod, LowDB (JSON)
+* **Backend** : Node.js, Hono, Zod, KV (Cloudflare)
 * **Frontend** : React 19, Vite, Tailwind CSS 4
 * **Outils** : Prettier, ESLint
 
