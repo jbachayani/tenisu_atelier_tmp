@@ -1,4 +1,4 @@
-import { Hono } from 'hono'
+import { type Context, Hono } from 'hono'
 import { getPlayer, getPlayers, postPlayer } from './controllers/players.js'
 import { getStats } from './controllers/stats.js'
 import { corsMiddleware } from './middlewares/cors.js'
@@ -12,9 +12,9 @@ export class App {
     app.post('/players', postPlayer)
     app.get('/stats', getStats)
 
-    app.onError((error, c) => {
+    app.onError((error, c: Context) => {
       console.error('HONO ERROR', error)
-      return c.text('valeur :' + c.var.FRONT_URL)
+      return c.text('valeur :' + c.env.FRONT_URL)
     })
 
     return app
