@@ -1,12 +1,12 @@
 import { Hono } from 'hono'
-import { cors } from 'hono/cors'
 import { getPlayer, getPlayers, postPlayer } from './controllers/players.js'
 import { getStats } from './controllers/stats.js'
+import { corsMiddleware } from './middlewares/cors.js'
 
 export class App {
   static createApp() {
     const app = new Hono().basePath('/api')
-    app.use('*', cors({ origin: '*' }))
+    app.use(corsMiddleware)
     app.get('/players', getPlayers)
     app.get('/players/:id', getPlayer)
     app.post('/players', postPlayer)
