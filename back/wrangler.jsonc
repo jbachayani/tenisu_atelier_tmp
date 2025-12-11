@@ -11,6 +11,7 @@
     }
   ],
   "vars": {
-    "FRONT_URL": "https://tenisu-front.pages.dev"
+    "FRONT_URL": "https://tenisu-front.pages.dev",
+    "ENABLE_CORS": "true"
   }
 }
