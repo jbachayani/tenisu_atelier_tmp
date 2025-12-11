@@ -11,6 +11,12 @@ export class App {
     app.get('/players/:id', getPlayer)
     app.post('/players', postPlayer)
     app.get('/stats', getStats)
+
+    app.onError((error, c) => {
+      console.error('HONO ERROR', error)
+      return c.text('Something went wrong')
+    })
+
     return app
   }
 }
