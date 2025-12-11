@@ -17,6 +17,9 @@ export class App {
     app.get('/players/:id', getPlayer)
     app.post('/players', postPlayer)
     app.get('/stats', getStats)
+    app.get('/status', (c: Context) => {
+      return c.text('valeur : ' + c.env.FRONT_URL)
+    })
 
     app.onError((error, c: Context) => {
       console.error('HONO ERROR', error)
