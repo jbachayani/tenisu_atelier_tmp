@@ -1,5 +1,3 @@
-import db from './db.json' with { type: 'json' }
-
 export interface Country {
   picture: string
   code: string
@@ -24,5 +22,3 @@ export interface Player {
   picture: string
   data: PlayerData
 }
-
-export const players: Player[] = db.players

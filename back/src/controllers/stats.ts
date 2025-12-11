@@ -1,5 +1,5 @@
 import type { Context } from 'hono'
-import { type Player, players } from '../services.js'
+import type { Player } from '../types.js'
 
 function getCountryWithBestWinRatio(players: Player[]): string {
   const countryStats: Record<string, { wins: number; total: number }> = {}
@@ -54,9 +54,12 @@ function getMedianHeight(players: Player[]): number {
 
 export async function getStats(c: Context) {
   try {
+    const players: Player[] = JSON.parse(await c.env.TENISU_DB.get('players'))
+
     const countryWithBestWinRatio = getCountryWithBestWinRatio(players)
     const averageBmi = getAverageBMI(players)
     const medianHeight = getMedianHeight(players)
+
     return c.json({ countryWithBestWinRatio, averageBmi, medianHeight })
   } catch (error) {
     return c.json({ error: 'Unknown error' })
