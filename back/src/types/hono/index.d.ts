@@ -9,5 +9,6 @@ declare module 'hono' {
 
   interface ContextVariableMap {
     FRONT_URL: string
+    ENABLE_CORS: string
   }
 }
