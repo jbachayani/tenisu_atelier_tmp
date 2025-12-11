@@ -6,7 +6,7 @@ import { corsMiddleware } from './middlewares/cors.js'
 export class App {
   static createApp() {
     const app = new Hono().basePath('/api')
-    app.use(corsMiddleware)
+    app.use('*', corsMiddleware)
     app.get('/players', getPlayers)
     app.get('/players/:id', getPlayer)
     app.post('/players', postPlayer)
