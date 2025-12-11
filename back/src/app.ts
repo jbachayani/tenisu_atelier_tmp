@@ -20,12 +20,6 @@ export class App {
     app.get('/status', (c: Context) => {
       return c.text('valeur : ' + c.env.FRONT_URL)
     })
-
-    app.onError((error, c: Context) => {
-      console.error('HONO ERROR', error)
-      return c.text('valeur :' + c.env.FRONT_URL)
-    })
-
     return app
   }
 }
