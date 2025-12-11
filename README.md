@@ -20,7 +20,7 @@ Assurez-vous d'avoir installé les outils suivants :
 
 1. Clonez le dépôt :
    ```bash
-   git clone <votre-url-de-repo>
+   git clone git@github.com:jbachayani/tenisu_atelier_tmp.git
    cd tenisu
    ```
 
@@ -39,7 +39,7 @@ Vous devez lancer le backend et le frontend dans deux terminaux séparés.
 cd back
 pnpm dev
 ```
-L'API sera accessible sur `http://localhost:3000`.
+L'API sera accessible sur `http://localhost:8787`.
 
 **Endpoints principaux :**
 - `GET /api/players` : Liste des joueurs triés par rang.
