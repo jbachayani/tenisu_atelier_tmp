@@ -11,6 +11,6 @@
     }
   ],
   "vars": {
-    "FRONT_URL": "http://localhost:5173"
+    "FRONT_URL": "https://tenisu-front.pages.dev"
   }
 }
